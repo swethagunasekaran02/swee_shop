@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<style>
+    .about_content {
+        position: absolute;
+        bottom: 150px;
+        left: 25vw;
+        width: 50vw;
+    }
+
+    .about_content h2 {
+        color: #ebebeb;
+        font-family: 'Libre Baskerville';
+        font-size: 70px;
+        font-family: 'Libre Baskerville', serif;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-color">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'upload/images/Logo.avif' %}" alt=""
+                    style="height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    <a class="nav-link" href="{% url 'category' %}">Category</a>
+                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'upload/images/img49.webp' %}" alt="">
+            </div>
+          
+
+            <div class="product_content">
+                <h2 style="color: #ebebeb;">Festive Specials
+                    to Timeless Favourites</h2>
+                <p style="color: #ebebeb;">EXPERIENCE MELT-IN-YOUR-MOUTH PERFECTION WITH OUR ARTISANAL MOTICHOOR LADDU.
+                    FIND SOMETHING TO
+                    SWEETEN EVERY MOMENT UNDER ONE ROOF..</p>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+
+        <div class="sweet_shop text-center pt-5" style="background-color: #8b2323;">
+            <h3 style="color:antiquewhite;" class="fs-2">Perfecting Joy
+                Since 1993</h3>
+            <p class=" fs-4 mt-5" style="color:antiquewhite;font-family: EB Garamond, serif;">Through countless trials, Rajesh Dadu crafted a motichoor so
+                soft and rich, it redefined mithai.</p>
+            <p class=" fs-4" style="color:antiquewhite;font-family: EB Garamond, serif;">Three decades ago, Dadu's was born inside a humble 800 sq. ft.
+                room. Today, it thrives across 12 stores in Hyderabad, with a menu featuring over 800 items.Now, the
+                next generation leads with the same passion and purpose, while upholding trust, taste, and timeless
+                celebration.</p>
+
+        </div>
+        <div class="sweet_shop" style="background-color: #8b2323;">
+            <img src="{% static 'upload/images/img4.jpg' %}" alt="">
+        </div>
+
+    </div>
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'upload/images/img50.webp' %}" alt="">
+            </div>
+
+            <div class="about_content">
+                <h2 style="  font-family: Instrument Serif, serif; text-align: center;">Years have passed,
+
+                    palates have evolved.
+
+                    But the joy of mithai kalakari
+
+                    remains constant.</h2>
+
+            </div>
+        </div>
+    </div>
+    <div class="heading p-4 text-center fs-1 " style="color:rgba(124, 17, 17, 0.871);">
+        <h2 style="font-family: DM Serif Display, serif;"> <img src="{% static 'upload/images/dwnimg.avif' %}" alt="" width="50px"height="70px">The Heart of Dadu's <img src="{% static 'upload/images/dwn.avif' %}" alt="" width="50px"height="70px"></h2>
+        <div class="d-flex justify-content-center">
+            <p class="fs-5 text-dark text-center " style="width:550px;font-family: Domine, serif;">In the hands of our ustaads, generations of
+                wisdom comes alive. Every mithai they craft holds a memory, a tradition, and the magic of true
+                craftsmanship.</p>
+        </div>
+
+
+
+    </div>
+    <div class="container d-flex p-4 justify-content-center flex-wrap card-width" style="background-color: #f6ede0;">
+        <div class="card text-center text-dark  " style="width: 18rem; margin-right: 30px;">
+            <div class="card-img-top image-container" style="background-color: #8b2323;">
+                <img src="{% static 'upload/images/img52.webp' %}" class="card-img-top " alt="...">
+
+            </div>
+
+        </div>
+        <div class="card text-center text-dark" style="width: 18rem;margin-right: 30px;">
+            <div class="card-img-top image-container" style="background-color: #8b2323;">
+                <img src="{% static 'upload/images/img53.webp' %}" class="card-img-top" alt="...">
+
+            </div>
+
+        </div>
+        <div class="card text-center text-dark" style="width: 18rem;margin-right: 30px;">
+            <div class="card-img-top image-container" style="background-color: #8b2323;">
+                <img src="{% static 'upload/images/img54.webp' %}" class="card-img-top" alt="...">
+
+            </div>
+
+        </div>
+        <div class="card text-center text-dark" style="width: 18rem;margin-right: 30px;">
+            <div class="card-img-top image-container" style="background-color: #8b2323;">
+                <img src="{% static 'upload/images/img55.webp' %}" class="card-img-top" alt="...">
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <div class="d-flex justify-content-around p-5 footer">
+        <div>
+            <h2 class="mb-3">QUICK LINKS</h2>
+            <ul>
+                <li>Our Brands</li>
+                <li>Shop</li>
+                <li>Bespoke Wedding</li>
+                <li>Corporate Gifting</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-3">POLICIES</h2>
+            <ul>
+                <li>Payment & Shipping</li>
+                <li>Return & Refund</li>
+                <li>Privacy Policy</li>
+                <li>Terms and Conditions</li>
+
+            </ul>
+        </div>
+        <div>
+            <h2 class="mb-3">CONTACT</h2>
+            <ul>
+                <li>+9959334007</li>
+                <li>sales@dadus.co.in</li>
+
+
+            </ul>
+        </div>
+    </div>
+    <div class="footer_bottom">
+        <div class="foote_img">
+            <img src="{% static 'upload/images/img40.webp' %}" alt="">
+        </div>
+    </div>
+    <div class="text-center pb-3" style="background-color: #8b2323;color:rgb(193, 179, 179);">
+        <h6>@Copy Rigth by Dadud</h6>
+    </div>
+
+</body>
+
+</html>

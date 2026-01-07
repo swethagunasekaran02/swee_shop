@@ -1,0 +1,508 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {% block tittle %}
+        home
+        {% endblock tittle %}</title>
+
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    {% block content %}
+    {% endblock content %}
+
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-color">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'upload/images/Logo.avif' %}" alt=""
+                    style="height: 50px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    <a class="nav-link" href="{% url 'category' %}">Category</a>
+                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    
+
+                </div>
+            </div>
+        </div>
+    </nav>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'upload/images/img2.webp' %}" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'upload/images/img7.webp' %}" alt="">
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'upload/images/img6.webp' %}" alt="">
+            </div>
+            <div class="product_content">
+                <h2>Festive Specials
+                    to Timeless Favourites</h2>
+                <p>EXPERIENCE MELT-IN-YOUR-MOUTH PERFECTION WITH OUR ARTISANAL MOTICHOOR LADDU. FIND SOMETHING TO
+                    SWEETEN EVERY MOMENT UNDER ONE ROOF..</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="heading p-3 text-center fs-1" style="color:rgba(124, 17, 17, 0.871);">
+        <h2 style="font-family: DM Serif Display, serif;">Curated by Popular Demand Sticker</h2>
+
+        <div class="container d-flex p-5 justify-content-center flex-wrap card-width"
+            style="background-color: #f6ede0;">
+            <div class="card text-center text-dark  " style="width: 18rem; margin-right: 30px;">
+                <div class="card-img-top image-container" style="background-color: #8b2323;">
+                    <img src="{% static 'upload/images/img10.webp' %}" class="card-img-top " alt="...">
+                    <button class="add-cart-btn fs-5 button"
+                        onclick="addToCart('AJMEERI KALAKAND ', 170, `{% static 'upload/images/img10.webp' %}`)">Add to Cart</button>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="color:brown">AJMEERI KALAKAND</h5>
+                    <p class="card-text fs-6 text-dark">From RS.170.</p>
+
+                </div>
+            </div>
+            <div class="card text-center text-dark" style="width: 18rem;margin-right: 30px;">
+                <div class="card-img-top image-container" style="background-color: #8b2323;">
+                    <img src="{% static 'upload/images/img8.webp' %}" class="card-img-top" alt="...">
+                    <button class="add-cart-btn fs-5 button"
+                        onclick="addToCart('MOTICHOOR LADDU ', 282, `{% static 'upload/images/img8.webp' %}`)">Add to Cart</button>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="color:brown">MOTICHOOR LADDU</h5>
+                    <p class="card-text fs-6 text-dark">From RS.282.</p>
+                </div>
+            </div>
+            <div class="card text-center text-dark" style="width: 18rem;margin-right: 30px;">
+                <div class="card-img-top image-container" style="background-color: #8b2323;">
+                    <img src="{% static 'upload/images/img9.webp' %}" class="card-img-top" alt="...">
+                    <button class="add-cart-btn fs-5 button"
+                        onclick="addToCart('KAJUL KATLI ', 340, `{% static 'upload/images/img9.webp' %}`)">Add to Cart</button>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title" style="color:brown">KAJUL KATLI</h5>
+                    <p class="card-text fs-6 text-dark">From RS.340.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="collection">
+        <div class="collect_img1">
+            <img src="{% static 'upload/images/img20.webp' %}" alt="">
+
+        </div>
+        <div class="content_box">
+            <h3>Corporate Collections</h3>
+            <p>HANDPICKED DELIGHTS FOR YOUR EMPLOYEES AND PARTNERS. EXPLORE NOW</p>
+            <button>Explore Now</button>
+        </div>
+        <div class="collect_img1">
+            <img src="{% static 'upload/images/img21.webp' %}" alt="">
+        </div>
+        <div class="content_box ">
+            <h3>Wedding Collections</h3>
+            <p>HANDPICKED DELIGHTS FOR YOUR EMPLOYEES AND PARTNERS. EXPLORE NOW</p>
+            <button>Explore Now</button>
+        </div>
+
+    </div>
+    <div>
+
+
+        <div class="container p-5">
+            <div class="row">
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card product-card text-center text-dark">
+                        <div class="image-container">
+                            <img src="{% static 'upload/images/img23.webp' %}" class="card-img-top" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Ghee Special', 200, `{% static 'upload/images/img23.webp' %}`)">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                    <h5 class="mt-2">Ghee Special</h5>
+                    <h6>RS.200</h6>
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card text-center text-dark">
+                        <div class="image-container">
+                            <img src="{% static 'upload/images/img24.webp' %}" class="card-img-top" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Snacks', 150,`{% static 'upload/images/img24.webp' %}`)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h5 class="mt-2">Snacks</h5>
+                    <h6>RS.150</h6>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card text-center text-dark">
+                        <div class="image-container">
+                            <img src="{% static 'upload/images/img25.webp' %}" class="card-img-top" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Dry Fruits Sweets', 210, `{% static 'upload/images/img25.webp' %}`)">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                    <h5 class="mt-2">Dry Fruits Sweets</h5>
+                    <h6>RS.210</h6>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card text-center text-dark">
+                        <div class="image-container">
+                            <img src="{% static 'upload/images/img26.webp' %}" class="card-img-top" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Andhra Sweets', 200, `{% static 'upload/images/img26.webp' %}`)">Add to
+                                Cart</button>
+                        </div>
+                    </div>
+                    <h5 class="mt-2">Andhra Sweets</h5>
+                    <h6>RS.200</h6>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card text-center text-dark">
+                        <div class="image-container">
+                            <img src="{% static 'upload/images/img27.webp' %}" class="card-img-top" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Gifting', 100, `{% static 'upload/images/img27.webp' %}`)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h5 class="mt-2">Gifting</h5>
+                    <h6>RS.100</h6>
+
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card text-center text-dark">
+                        <div class="image-container">
+                            <img src="{% static 'upload/images/img28.webp' %}" class="card-img-top" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Milk Sweets', 270, `{% static 'upload/images/img28.webp' %}`)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h5 class="mt-2">Milk Sweets</h5>
+                    <h6>RS.270</h6>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card text-center text-dark">
+                        <div class="image-container">
+                            <img src="{% static 'upload/images/img29.webp' %}" class="card-img-top" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Chikki', 280, `{% static 'upload/images/img29.webp' %}`)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h5 class="mt-2">Chikkiv</h5>
+                    <h6>RS.280</h6>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 mb-3">
+                    <div class="card text-center text-dark">
+                        <div class="image-container">
+                            <img src="{% static 'upload/images/img30.webp' %}" class="card-img-top" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Bites', 100, `{% static 'upload/images/img30.webp' %}`)">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h5 class="mt-2">Bites</h5>
+                    <h6>RS.100</h6>
+                </div>
+
+
+
+            </div>
+        </div>
+       
+        <div class="d-flex ">
+            <div class="sweet_shop">
+                <img src="{% static 'upload/images/img31.webp' %}" alt="">
+            </div>
+            <div class="sweet_shop text-center pt-5">
+                <h3>Tea-Time Delights</h3>
+                <p class="text-dark fs-5" style="font-family: EB Garamond, serif;">There’s a special kind of magic in
+                    the quiet moments between sips of warm tea. The
+                    gentle aroma, the soft clink of a cup, and the pause it brings to a busy day create a tiny ritual of
+                    comfort. Pair it with a sweet treat, a cozy corner, or a favorite book, and suddenly time slows
+                    down.!</p>
+                <button style="background-color: bisque;color:#c66f28;border-radius: 50px;border-color: #c66f28;"
+                    class="fs-5 text-dark">Know
+                    More</button>
+            </div>
+
+        </div>
+        <div class="text-center mt-3" id="order">
+            <h2 style="font-family: DM Serif Display, serif;">Our Best-Sellers</h2>
+            <div class="container p-5">
+                <div class="row">
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card text-center text-dark image-container">
+                            <img src="{% static 'upload/images/img32.webp' %}" class="card-img-top main-img" alt="">
+                            <img src="{% static 'upload/images/img41.jpg' %}" class="card-img-top hover-img" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Fresh Cream Pineapple Cake', 100, `{% static 'upload/images/img32.webp' %}`)">
+                                Add to Cart
+                            </button>
+                        </div>
+                        <h5 class="mt-2">Fresh Cream Pineapple Cake</h5>
+                        <h6>RS.100</h6>
+                    </div>
+
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card text-center text-dark image-container">
+                            <img src="{% static 'upload/images/img33.webp' %}" class="card-img-top" alt="">
+                            <img src="{% static 'upload/images/img42.jpg' %}" class="card-img-top hover-img" alt="">
+                            <button class="add-cart-btn fs-5" onclick="addToCart('Overload Brownie', 50,`{% static 'upload/images/img33.webp' %}`)">
+                                Add to Cart
+                            </button>
+                        </div>
+                        <h5 class="mt-2">Overload Brownie</h5>
+                           <h6>RS.50</h6>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card text-center text-dark image-container">
+                            <img src="{% static 'upload/images/img34.webp' %}" class="card-img-top" alt="">
+                            <img src="{% static 'upload/images/img43.jpg' %}" class="card-img-top hover-img" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Danse Loaf', 40, `{% static 'upload/images/img34.webp' %}`)">Add to Cart</button>
+                        </div>
+                        <h5 class="mt-2">Danse Loaf</h5>
+                           <h6>RS.40</h6>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card text-center text-dark image-container">
+                            <img src="{% static 'upload/images/img35.webp' %}" class="card-img-top" alt="">
+                            <img src="{% static 'upload/images/img44.jpg' %}" class="card-img-top hover-img" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Baked Wada Pao', 70, `{% static 'upload/images/img35.webp' %}`)">Add to Cart</button>
+                        </div>
+                        <h5 class="mt-2">Baked Wada Pao</h5>
+                           <h6>RS.70</h6>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card text-center text-dark image-container">
+                            <img src="{% static 'upload/images/img36.webp' %}" class="card-img-top" alt="">
+                            <img src="{% static 'upload/images/img45.jpg' %}" class="card-img-top hover-img" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Blueberry Cheesecake cup', 150, `{% static 'upload/images/img36.webp' %}`)">Add to Cart</button>
+                        </div>
+                        <h5 class="mt-2">Blueberry Cheesecake cup</h5>
+                           <h6>RS.150</h6>
+
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card text-center text-dark image-container">
+                            <img src="{% static 'upload/images/img37.webp' %}" class="card-img-top" alt="">
+                            <img src="{% static 'upload/images/img46.jpg' %}" class="card-img-top hover-img" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Milk Sweets', 60, `{% static 'upload/images/img37.webp' %}`)">Add to Cart</button>
+                        </div>
+                        <h5 class="mt-2">Milk Sweets</h5>
+                           <h6>RS.60</h6>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card text-center text-dark image-container">
+                            <img src="{% static 'upload/images/img38.webp' %}" class="card-img-top" alt="">
+                            <img src="{% static 'upload/images/img47.jpg' %}" class="card-img-top hover-img" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Chocoholic Pastry', 90, `{% static 'upload/images/img38.webp' %}`)">Add to Cart</button>
+                        </div>
+                        <h5 class="mt-2">Chocoholic Pastry</h5>
+                           <h6>RS.90</h6>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3 mb-3">
+                        <div class="card text-center text-dark image-container">
+                            <img src="{% static 'upload/images/img39.webp' %}" class="card-img-top" alt="">
+                            <img src="{% static 'upload/images/img48.jpg' %}" class="card-img-top hover-img" alt="">
+                            <button class="add-cart-btn fs-5"
+                                onclick="addToCart('Chocolate Chip Cookies', 100, `{% static 'upload/images/img93.webp' %}`)">Add
+                                to Cart</button>
+                        </div>
+                        <h5 class="mt-2">Chocolate Chip Cookies</h5>
+                           <h6>RS.100</h6>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-3 shop">
+            <h3>Like Our Products?</h3>
+            <p class="text-dark">Treat yourself to your favourite Theobroma products or surprise your loved ones with an
+                edible gift.</p>
+            <button style="background-color: #f4bcb4;color:#c66f28;border-radius: 40px;"><a href="#order" style="text-decoration: none;color:#8b2323aa">ORDER ONLINE</a></button>
+        </div>
+
+        <div class="d-flex justify-content-around p-5 footer">
+            <div>
+                <h2 class="mb-3">QUICK LINKS</h2>
+                <ul>
+                    <li>Our Brands</li>
+                    <li>Shop</li>
+                    <li>Bespoke Wedding</li>
+                    <li>Corporate Gifting</li>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-3">POLICIES</h2>
+                <ul>
+                    <li>Payment & Shipping</li>
+                    <li>Return & Refund</li>
+                    <li>Privacy Policy</li>
+                    <li>Terms and Conditions</li>
+
+                </ul>
+            </div>
+            <div>
+                <h2 class="mb-3">CONTACT</h2>
+                <ul>
+                    <li>+9959334007</li>
+                    <li>sales@dadus.co.in</li>
+
+
+                </ul>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="foote_img">
+                <img src="{% static 'upload/images/img40.webp' %}" alt="">
+            </div>
+        </div>
+        <div class="text-center pb-3" style="background-color: #8b2323;color:rgb(193, 179, 179);">
+            <h6>@Copy Rigth by Dadud</h6>
+        </div>
+
+        <!-- payment -->
+
+       <div id="cartSidebar" class="cart-sidebar"
+    style="position:fixed;top:0;right:-400px;width:400px;height:100%;background:#f8f9fa;padding:20px;transition:0.3s;overflow-y:auto;">
+    <h4>Your Cart</h4>
+    <div id="cartItems"></div>
+    <hr>
+    <h5>Total: ₹<span id="cartTotal">0</span></h5>
+
+    <button class="btn btn-warning w-100 mt-3 text-light" onclick="checkout()">Pay Now</button>
+    <button class="btn btn-danger w-100 mt-2 text-light" onclick="closeCart()">Close</button>
+</div>
+
+
+
+        <script>
+    let cart = {};
+
+    function openCart() { document.getElementById('cartSidebar').style.right = '0'; }
+    function closeCart() { document.getElementById('cartSidebar').style.right = '-400px'; }
+
+    function addToCart(name, price, img) {
+        if (cart[name]) {
+            cart[name].qty++;
+        } else {
+            cart[name] = { price: price, qty: 1, img: img };
+        }
+        updateCartUI();
+        openCart();
+    }
+
+    function updateCartUI() {
+        const cartItemsDiv = document.getElementById('cartItems');
+        const cartTotalSpan = document.getElementById('cartTotal');
+        cartItemsDiv.innerHTML = '';
+        let total = 0;
+
+        for (let item in cart) {
+            let p = cart[item];
+            let subtotal = p.price * p.qty;
+            total += subtotal;
+
+            cartItemsDiv.innerHTML += `
+                <div style="display:flex; align-items:center; margin-bottom:15px; border-bottom:1px solid #ddd; padding-bottom:10px;">
+                    <img src="${p.img}" style="width:60px; height:60px; object-fit:cover; border-radius:5px; margin-right:10px;">
+                    <div style="flex:1;">
+                        <strong>${item}</strong><br>
+                        Price: ₹${p.price} <br>
+                        Quantity: ${p.qty} <br>
+                        Subtotal: ₹${subtotal}
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:5px;">
+                        <button onclick="increment('${item}')" style="width:40px;height:40px">+</button>
+                        <button onclick="decrement('${item}')"style="width:40px;height:40px">-</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        cartTotalSpan.innerText = total;
+    }
+
+    function increment(name) { cart[name].qty++; updateCartUI(); }
+    function decrement(name) { 
+        cart[name].qty--; 
+        if (cart[name].qty <= 0) delete cart[name]; 
+        updateCartUI(); 
+    }
+
+    function checkout() {
+        if (Object.keys(cart).length === 0) { 
+            alert("Cart is empty!"); 
+            return; 
+        }
+        let totalAmount = Object.values(cart).reduce((acc, item) => acc + item.price * item.qty, 0);
+        alert("Payment Successful! Total: ₹" + totalAmount);
+        cart = {};
+        updateCartUI();
+        closeCart();
+    }
+    
+
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
